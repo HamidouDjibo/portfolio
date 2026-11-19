@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djibo Hamidou | Développeur Full Stack & Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5be5f8dfbc.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Bouton retour en haut -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#home">Portfo<span>lio.</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn-link">Accueil</a></li>
+                <li><a href="#about" class="menu-btn-link">À propos</a></li>
+                <li><a href="#services" class="menu-btn-link">Expertises</a></li>
+                <li><a href="#skills" class="menu-btn-link">Compétences</a></li>
+                <li><a href="#projects" class="menu-btn-link">Réalisations</a></li>
+                <li><a href="#contact" class="menu-btn-link">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Bonjour, je m'appelle</div>
+                <div class="text-2">Djibo Hamidou</div>
+                <div class="text-3">Je suis <span class="typing">Développeur Full Stack</span></div>
+                <div class="home-buttons">
+                    <a href="#contact">Me contacter</a>
+                    <a href="#projects" class="btn-outline">Voir mes projets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <div class="about-slider">
+                        <img src="portfolio-images/images/LaureatSeedsfortheFuture.png"
+                            alt="Djibo Hamidou - Lauréat Seeds for the Future" class="slide active">
+                        <img src="portfolio-images/images/laureat-dataTour.png" alt="Djibo Hamidou" class="slide">
+                        <div class="slider-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Djibo Hamidou — <span class="typing-2">Développeur Full Stack</span></div>
+                    <p>
+                        Animé par une passion pour la tech, mon profil hybride de <strong>Développeur</strong> et
+                        <strong>Data Scientist junior</strong> témoigne de ma polyvalence. Mes expériences au sein
+                        d'équipes internationales (notamment entre la Côte d'Ivoire, la Suisse et aussi la Chine) ont
+                        renforcé mon adaptabilité et mon aisance opérationnelle en anglais.
+                    </p>
+                    <p class="about-subtext">
+                        Actuellement en <strong>Master Data-Science</strong> (Université de Rennes × Université
+                        Félix-Houphouët-Boigny), je suis ouvert aux <strong>opportunités professionnelles</strong> et
+                        collaborations ambitieuses pour concevoir des solutions data et logicielles à fort impact.
+                    </p>
+                    <div class="about-highlights">
+                        <span><i class="fas fa-trophy"></i> 1ère place phase Nationale — Data Tour 2026</span>
+                        <span><i class="fas fa-graduation-cap"></i> Master Informatique (Rennes × UFHB)</span>
+                        <span><i class="fas fa-id-card"></i> 25 ans • Permis B • Abidjan</span>
+                    </div>
+                    <a href="DjiboHamidouCV.pdf" download="CV_Djibo_Hamidou.pdf">Télécharger mon CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expertises / Services -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">Mes expertises</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-code"></i>
+                        <div class="text">Développement Full Stack</div>
+                        <p>Conception, développement et maintenance de plateformes web robustes avec
+                            <strong>Angular</strong>, <strong>TypeScript</strong> et <strong>Grails</strong> pour des
+                            organismes publics et privés.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-brain"></i>
+                        <div class="text">Data Science & IA</div>
+                        <p>Extraction de données (OCR, NLP avec <strong>spaCy</strong>), analyse statistique sous
+                            <strong>Python</strong> et <strong>R</strong>, et visualisation décisionnelle via
+                            <strong>Power BI</strong> et <strong>Tableau</strong>.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-server"></i>
+                        <div class="text">DevOps & Bases de données</div>
+                        <p>Conteneurisation avec <strong>Docker</strong>, intégration continue (<strong>GitLab
+                                CI/CD</strong>), administration SQL (<strong>MySQL, MSSQL</strong>) et supervision
+                            réseau critique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences & Parcours -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">Mes compétences</h2>
+            <div class="skills-content">
+                <div class="column left">
+                    <div class="text">Compétences techniques & parcours</div>
+                    <p>
+                        Mon parcours allie génie logiciel et science des données. En tant que <strong>Développeur Full
+                            Stack</strong> chez <em>GROWING (CIV) / PROACTIVE (Suisse)</em> (2025–2026), j'ai livré des
+                        applications web critiques en environnement agile. Auparavant, mon poste de <strong>Superviseur
+                            Réseau</strong> à l'<em>AGNOC (Huawei)</em> m'a forgé une solide rigueur opérationnelle sur
+                        les infrastructures CORE et RAN.
+                    </p>
+                    <div class="certif-list">
+                        <p><strong>Certifications & Formations clés :</strong></p>
+                        <ul>
+                            <li><i class="fas fa-award"></i> 1ère place nationale — Data Tour 2026</li>
+                            <li><i class="fas fa-certificate"></i> Certification Data Scientist — GOMYCODE</li>
+                            <li><i class="fas fa-certificate"></i> Seeds for the Future — Huawei</li>
+                            <li><i class="fas fa-university"></i> Académie des développeurs — GROWING × PROACTIVE Swiss
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#projects">Découvrir mes réalisations</a>
+                </div>
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>Python & Data Science (Pandas, NumPy, spaCy, R)</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line python"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Angular & TypeScript</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line angular"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Grails (Backend Web & API)</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line grails"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>HTML5 / CSS3 / JavaScript</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line web"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Bases de données (SQL, MySQL, MSSQL)</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line sql"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>DevOps & BI (Docker, GitLab CI/CD, Power BI)</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="line devops"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réalisations / Projets -->
+    <section class="projects" id="projects">
+        <div class="max-width">
+            <h2 class="title">Mes réalisations</h2>
+            <div class="proj-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="text">Resume Parser (IA / NLP)</div>
+                        <p>Système automatisé d'extraction et de structuration d'informations de CV par reconnaissance
+                            optique de caractères (OCR) et traitement du langage naturel. Projet de fin de bootcamp Data
+                            Science.</p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>spaCy</span>
+                            <span>OCR</span>
+                            <span>NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-tower-cell"></i>
+                        <div class="text">Reporting & Escalades AGNOC</div>
+                        <p>Application web développée pour la filiale Sierra Leone de l'AGNOC Huawei afin d'automatiser
+                            le suivi des incidents réseau, la gestion des escalades et les rapports de disponibilité.
+                        </p>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-industry"></i>
+                        <div class="text">Gestion Commerciale d'Usine</div>
+                        <p>Application métier complète dédiée à la gestion des ventes, du suivi de la facturation et du
+                            portefeuille clients pour une unité industrielle locale à Abidjan.</p>
+                        <div class="tech-tags">
+                            <span>WinDev</span>
+                            <span>Base de données</span>
+                            <span>Gestion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Me contacter</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Restons en contact</div>
+                    <p>Ouvert aux <strong>opportunités professionnelles</strong>, collaborations et projets ambitieux en
+                        <strong>Data Science, Intelligence Artificielle ou en Informatique en général</strong>.
+                        N'hésitez pas à me contacter pour échanger autour de vos besoins.</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Nom</div>
+                                <div class="sub-title">Djibo Hamidou</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Localisation</div>
+                                <div class="sub-title">Plateau Dokui, Abidjan — Côte d'Ivoire</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-phone"></i>
+                            <div class="info">
+                                <div class="head">Téléphone</div>
+                                <div class="sub-title">01 43 27 61 39 / 07 01 95 17 70</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">djibo8526@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/djibo-hamidou-05062b201/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/HamidouDjibo" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:djibo8526@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">M'envoyer un message</div>
+                    <form id="contact-form" action="mailto:djibo8526@gmail.com" method="post" enctype="text/plain">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" name="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" name="email" placeholder="Votre email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="subject" placeholder="Objet (ex: Proposition de stage Data)"
+                                required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea name="message" cols="30" rows="10"
+                                placeholder="Décrivez votre projet ou opportunité..." required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Envoyer le message</button>
+                        </div>
+                        <p id="form-status" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <span>Créé par <a href="#home">Djibo Hamidou</a> | <span class="far fa-copyright"></span> 2026 Tous droits
+            réservés.</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
