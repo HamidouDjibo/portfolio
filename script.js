@@ -34,7 +34,7 @@ $(document).ready(function(){
     // Animation de frappe dynamique (sans dépendance externe)
     const roles = [
         "Développeur",
-        "Data Scientist Junior",
+        "Data-Scientist Junior",
         "IT Support"
     ];
     let roleIndex = 0;
