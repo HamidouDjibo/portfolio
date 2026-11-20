@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Riz — Mini-ERP (ETS R.R.) | Djibo Hamidou</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/5be5f8dfbc.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Bouton retour en haut -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar sticky">
+        <div class="max-width">
+            <div class="logo"><a href="../index.html#home">Portfo<span>lio.</span></a></div>
+            <ul class="menu">
+                <li><a href="../index.html#home">Accueil</a></li>
+                <li><a href="../index.html#projects">Réalisations</a></li>
+                <li><a href="../index.html#about">À propos</a></li>
+                <li><a href="../index.html#services">Expertises</a></li>
+                <li><a href="../index.html#skills">Compétences</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../DjiboHamidouCV.pdf" download="CV_Djibo_Hamidou.pdf" class="nav-cv-btn"><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête du projet -->
+    <header class="project-hero">
+        <div class="max-width">
+            <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux réalisations</a>
+            <div class="project-badge">Full-Stack • Mini-ERP Industriel & Commercial • Python / FastAPI</div>
+            <h1>Gestion Riz — Mini-ERP (ETS R.R.)</h1>
+            <p class="project-lead">
+                Application web full-stack de gestion intégrée conçue pour une unité de retraitement et de commercialisation de riz (<strong>Établissement de Retraitement de Riz — ETS R.R.</strong>). Elle digitalise l'ensemble de la chaîne de valeur : de l'approvisionnement en riz brut et le suivi des rendements d'usinage jusqu'à la vente en gros/détail avec gestion des acomptes et génération de factures PDF.
+            </p>
+            <div class="project-meta">
+                <span><i class="fab fa-python"></i> Python 3.11+ & FastAPI</span>
+                <span><i class="fas fa-layer-group"></i> SQLAlchemy ORM & Pydantic</span>
+                <span><i class="fas fa-database"></i> SQLite & PostgreSQL</span>
+                <span><i class="fas fa-file-pdf"></i> Jinja2, Bootstrap 5 & html2pdf.js</span>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/HamidouDjibo/gestion-riz-app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="fab fa-github"></i> Voir le code sur GitHub
+                </a>
+                <a href="#architecture" class="btn-secondary">
+                    <i class="fas fa-sitemap"></i> Explorer l'architecture
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Captures d'écran -->
+    <section class="project-screenshots">
+        <div class="max-width">
+            <h2 class="title">Aperçu de l'application</h2>
+            <p class="section-intro">
+                Cliquez sur une capture pour l'agrandir. L'interface couvre le pilotage global, la transformation industrielle, l'encaissement et l'édition de factures calibrées au format A4.
+            </p>
+            <div class="screenshots-grid">
+                <figure class="screenshot-card">
+                    <div class="screenshot-frame">
+                        <img src="../portfolio-images/images/projets/dashboard.png" alt="Gestion Riz - Tableau de Bord et Pilotage" class="zoomable-img">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Agrandir</span>
+                    </div>
+                    <figcaption>
+                        <h3>Tableau de Bord & Pilotage</h3>
+                        <p>Vue synthétique des indicateurs clés de l'usine : niveaux de stocks brut et fini, suivi de l'activité commerciale et accès rapide aux modules métier.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="screenshot-card">
+                    <div class="screenshot-frame">
+                        <img src="../portfolio-images/images/projets/production.png" alt="Gestion Riz - Module Production et Usinage" class="zoomable-img">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Agrandir</span>
+                    </div>
+                    <figcaption>
+                        <h3>Production & Usinage</h3>
+                        <p>Enregistrement des lots de riz brut transformés en sacs finis avec calcul automatique du <strong>taux de rendement industriel</strong> et contrôles stricts de cohérence des stocks.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="screenshot-card">
+                    <div class="screenshot-frame">
+                        <img src="../portfolio-images/images/projets/caisse.png" alt="Gestion Riz - Caisse et Gestion des Acomptes" class="zoomable-img">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Agrandir</span>
+                    </div>
+                    <figcaption>
+                        <h3>Caisse & Gestion des Acomptes</h3>
+                        <p>Vente B2B/B2C filtrée sur les stocks finis disponibles, ajustement négociable du prix unitaire avec historisation et calcul sécurisé des paiements partiels.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="screenshot-card">
+                    <div class="screenshot-frame">
+                        <img src="../portfolio-images/images/projets/facture.png" alt="Gestion Riz - Facturation et Reçu PDF Format A4" class="zoomable-img">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Agrandir</span>
+                    </div>
+                    <figcaption>
+                        <h3>Facturation & Reçu PDF (Format A4)</h3>
+                        <p>Édition de reçus prêts à imprimer ou exporter en PDF via <strong>html2pdf.js</strong>, intégrant les badges de statut (<em>Payé</em>, <em>Acompte versé</em>, <em>Non Payé</em>) et zones de signature.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section class="project-features">
+        <div class="max-width">
+            <h2 class="title">Fonctionnalités clés</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Module de Production & Usinage</h3>
+                    <p>Transformation matière première → produit fini avec calcul en temps réel du rendement industriel, double validation front/back et annulation atomique protégée si le lot fini est déjà vendu.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-cash-register"></i></div>
+                    <h3>Caisse & Ventes B2B/B2C</h3>
+                    <p>Exposition exclusive des produits à l'état <code>FINI</code> en stock, négociation du prix unitaire à la volée avec historisation sur facture et sécurisation des acomptes face au Total TTC.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h3>Facturation & Export PDF A4</h3>
+                    <p>Génération de reçus professionnels calibrés pour l'impression A4 et l'export PDF direct, avec statuts dynamiques de règlement, récapitulatif des versements et mentions légales.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-history"></i></div>
+                    <h3>Traçabilité & Journal d'Audit</h3>
+                    <p>Chaque entrée, vente, usinage ou annulation alimente un journal horodaté (<code>MouvementStock</code>) consignant le stock avant/après mouvement et l'utilisateur connecté.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Architecture & Modèles -->
+    <section class="project-arch" id="architecture">
+        <div class="max-width">
+            <h2 class="title">Architecture technique</h2>
+            <p class="section-intro">
+                L'application repose sur une architecture modulaire <strong>FastAPI + SQLAlchemy</strong> séparant le routage métier, la validation Pydantic, la logique de traçabilité et les vues serveur Jinja2.
+            </p>
+
+            <div class="pipelines-grid">
+                <div class="pipeline-box">
+                    <h3><i class="fas fa-folder-tree"></i> 1. Structuration Modulaire</h3>
+                    <ol>
+                        <li><strong>Routers Métier :</strong> Contrôleurs dédiés (<code>auth</code>, <code>clients</code>, <code>produits</code>, <code>production</code>, <code>commandes</code>).</li>
+                        <li><strong>Validation & Sécurité :</strong> Schémas <code>Pydantic</code> pour le contrôle des entrées et sessions authentifiées via <code>Starlette Sessions</code>.</li>
+                        <li><strong>Services Partagés :</strong> Centralisation des écritures atomiques et de la journalisation dans <code>services.py</code>.</li>
+                        <li><strong>Rendu Front-End :</strong> Templates <code>Jinja2</code> réactifs stylisés avec <code>Bootstrap 5</code> et export client <code>html2pdf.js</code>.</li>
+                    </ol>
+                </div>
+
+                <div class="pipeline-box">
+                    <h3><i class="fas fa-cloud-upload-alt"></i> 2. Persistance & Déploiement Cloud</h3>
+                    <ol>
+                        <li><strong>Bascule Automatique DB :</strong> Détection dynamique de <code>DATABASE_URL</code> dans <code>database.py</code>.</li>
+                        <li><strong>Mode Local / Léger :</strong> Initialisation automatique du répertoire <code>./data</code> et des tables <code>SQLite</code> en l'absence d'URL distante.</li>
+                        <li><strong>Mode Production :</strong> Bascule transparente vers <code>PostgreSQL</code> (<code>postgresql+psycopg2</code>) pour l'hébergement cloud.</li>
+                        <li><strong>CI/CD Render :</strong> Déploiement continu connecté à GitHub via serveur ASGI <code>Uvicorn</code>.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Tableau des Modèles Relationnels -->
+            <div class="api-table-wrapper">
+                <h3>Modèles de données principaux (SQLAlchemy)</h3>
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>Entité</th>
+                            <th>Couche / Fichier</th>
+                            <th>Responsabilité métier</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="http-badge">Produit</span></td>
+                            <td><code>app/models.py</code></td>
+                            <td>Distinction des états (<code>BRUT</code> / <code>FINI</code>), suivi des quantités disponibles et tarifs de référence.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="http-badge">Transformation</span></td>
+                            <td><code>app/models.py</code></td>
+                            <td>Enregistrement des opérations d'usinage, calcul du taux de rendement et gestion des annulations atomiques.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="http-badge">Client & Commande</span></td>
+                            <td><code>app/models.py</code></td>
+                            <td>Gestion du portefeuille B2B/B2C, prix unitaires historisés, suivi des acomptes et génération des factures A4.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="http-badge">MouvementStock</span></td>
+                            <td><code>app/services.py</code></td>
+                            <td>Journal d'audit horodaté enregistrant le stock avant/après chaque opération et l'utilisateur responsable.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bottom-nav">
+                <a href="../index.html#projects" class="btn-primary"><i class="fas fa-arrow-left"></i> Toutes les réalisations</a>
+                <a href="../index.html#contact" class="btn-outline-dark">Discuter de ce projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modale d'agrandissement des captures -->
+    <div id="img-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Aperçu agrandi">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <span>Créé par <a href="../index.html#home">Djibo Hamidou</a> | <span class="far fa-copyright"></span> 2026 Tous droits réservés.</span>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Zoom sur les captures d'écran
+        $(document).ready(function(){
+            $('.screenshot-frame').click(function(){
+                const img = $(this).find('img');
+                $('#lightbox-img').attr('src', img.attr('src'));
+                $('#lightbox-caption').text(img.attr('alt'));
+                $('#img-lightbox').fadeIn(200).css('display', 'flex');
+            });
+
+            $('.lightbox-close, #img-lightbox').click(function(e){
+                if(e.target !== $('#lightbox-img')[0]){
+                    $('#img-lightbox').fadeOut(200);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
