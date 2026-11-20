@@ -1240,3 +1240,18 @@ footer span a:hover{
         width: 100%;
     }
 }
+
+/* Affichage centré et entier pour les schémas/captures annotées uniques */
+.single-screenshot-wrapper{
+    max-width: 860px;
+    margin: 0 auto;
+}
+.screenshot-frame.contain-frame{
+    aspect-ratio: auto;
+    background: #fff;
+    padding: 14px;
+}
+.screenshot-frame.contain-frame img{
+    height: auto;
+    object-fit: contain;
+}

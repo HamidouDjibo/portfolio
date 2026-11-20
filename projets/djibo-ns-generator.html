@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS GENERATOR | Djibo Hamidou</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/5be5f8dfbc.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Bouton retour en haut -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar sticky">
+        <div class="max-width">
+            <div class="logo"><a href="../index.html#home">Portfo<span>lio.</span></a></div>
+            <ul class="menu">
+                <li><a href="../index.html#home">Accueil</a></li>
+                <li><a href="../index.html#projects">Réalisations</a></li>
+                <li><a href="../index.html#about">À propos</a></li>
+                <li><a href="../index.html#services">Expertises</a></li>
+                <li><a href="../index.html#skills">Compétences</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../DjiboHamidouCV.pdf" download="CV_Djibo_Hamidou.pdf" class="nav-cv-btn"><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête du projet -->
+    <header class="project-hero">
+        <div class="max-width">
+            <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux réalisations</a>
+            <div class="project-badge">Automatisation Télécom • Application Desktop Python • Supervision Réseau</div>
+            <h1>DNS GENERATOR </h1>
+            <p class="project-lead">
+                Application de bureau développée en <strong>Python</strong> pour automatiser le traitement des alarmes réseau et faciliter la génération des notifications <strong>Network Status (NS)</strong> et <strong>OSS</strong>. Elle centralise l'extraction des informations des sites depuis des exports Excel, la recherche instantanée, la gestion des sites partagés et la mise à jour des bases de référence.
+            </p>
+            <div class="project-meta">
+                <span><i class="fab fa-python"></i> Python & Tkinter GUI</span>
+                <span><i class="fas fa-table"></i> Pandas & OpenPyXL</span>
+                <span><i class="fas fa-clock"></i> Pytz (Heure locale Abidjan)</span>
+                <span><i class="fas fa-code"></i> Expressions Régulières (Regex)</span>
+            </div>
+            <div class="project-actions">
+                <a href="#interface" class="btn-primary">
+                    <i class="fas fa-desktop"></i> Explorer l'interface annotée
+                </a>
+                <a href="#fonctionnement" class="btn-secondary">
+                    <i class="fas fa-cogs"></i> Règles métier & fichiers
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Interface Annotée -->
+    <section class="project-screenshots" id="interface">
+        <div class="max-width">
+            <h2 class="title">Interface de l'application</h2>
+            <p class="section-intro">
+                Conçue avec <strong>Tkinter</strong> pour une prise en main rapide en salle de supervision réseau. Cliquez sur la capture pour l'afficher en plein écran.
+            </p>
+
+            <div class="single-screenshot-wrapper">
+                <figure class="screenshot-card">
+                    <div class="screenshot-frame contain-frame">
+                        <img src="../portfolio-images/images/projets/interface-annotee.png" alt="Interface annotée de DJIBO NS GENERATOR" class="zoomable-img">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Agrandir</span>
+                    </div>
+                    <figcaption>
+                        <h3>Vue d'ensemble des 6 zones fonctionnelles (Tkinter)</h3>
+                        <p>Centralisation de l'horloge temps réel d'Abidjan, de la zone d'édition des notifications NS/OSS, de la recherche multicritère par site et des commandes d'action rapide.</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Tableau des repères 1 à 6 -->
+            <div class="api-table-wrapper" style="margin-top: 40px;">
+                <h3>Légende détaillée de l'interface</h3>
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 90px; text-align: center;">Repère</th>
+                            <th>Élément</th>
+                            <th>Rôle & Actions associées</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;"><span class="http-badge">1</span></td>
+                            <td><strong>Affichage de l'heure locale</strong></td>
+                            <td>Affiche l'heure actuelle d'Abidjan en temps réel (gestion du fuseau horaire via <code>pytz</code>) avec rappels intégrés.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><span class="http-badge">2</span></td>
+                            <td><strong>Titre principal</strong></td>
+                            <td>Identifie la version active de l'outil : <code>DJIBO NS GENERATOR V2.0</code>.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><span class="http-badge">3</span></td>
+                            <td><strong>Zone d'affichage des résultats</strong></td>
+                            <td>Restitue les <em>NS Lines</em> générées, les notifications OSS structurées et les fiches détaillées des sites recherchés.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><span class="http-badge">4</span></td>
+                            <td><strong>Boutons d'actions principales</strong></td>
+                            <td>Regroupe les 5 commandes : <code>Generate NS Lines</code> (depuis Excel), <code>Generate OSS Notification</code>, <code>Clear</code>, <code>Modify</code> (édition de site) et <code>Quit</code>.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><span class="http-badge">5</span></td>
+                            <td><strong>Barre de recherche</strong></td>
+                            <td>Permet de saisir l'identifiant (<em>Site ID</em>) ou le nom d'un site réseau à consulter.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><span class="http-badge">6</span></td>
+                            <td><strong>Bouton Search</strong></td>
+                            <td>Déclenche l'interrogation croisée des fichiers de référence pour afficher le statut et les métadonnées du site.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section class="project-features">
+        <div class="max-width">
+            <h2 class="title">Fonctionnalités principales</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-file-excel"></i></div>
+                    <h3>Génération automatique des NS Lines</h3>
+                    <p>Extraction des identifiants et noms de sites depuis la colonne <code>MO Name</code> d'un fichier d'alarmes <code>.xlsx</code>, récupération automatique de la région, adaptation du message selon le statut de partage (avec fournisseur associé) et comptage des occurrences par région.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>Notifications OSS & Priorisation P1 / P2</h3>
+                    <p>Détermination de l'heure de début d'incident à partir de l'alarme la plus ancienne (<code>Last Occurred (NT)</code>), liste des sites impactés, ventilation par région et attribution automatique de la priorité : <strong>P1</strong> (5 sites ou plus) ou <strong>P2</strong> (moins de 5 sites).</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-search-location"></i></div>
+                    <h3>Recherche & Mise à jour des sites</h3>
+                    <p>Consultation instantanée d'un site (ID, nom, région, statut <code>ACCEPTED</code> ou <code>FAILED</code>, fournisseur et information FME). Intègre l'ajout assisté des sites inconnus et l'édition directe via le bouton <code>Modify</code>.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <h3>Horloge Abidjan & Rappels horaires</h3>
+                    <p>Suivi en direct de l'heure d'Abidjan accompagné de rappels automatiques à <strong>10 minutes</strong>, <strong>5 minutes</strong> et <strong>1 minute</strong> avant chaque heure pile afin de garantir l'envoi ponctuel des rapports Network Status.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Fonctionnement & Fichiers de référence -->
+    <section class="project-arch" id="fonctionnement">
+        <div class="max-width">
+            <h2 class="title">Traitement & Bases de référence</h2>
+            <p class="section-intro">
+                L'application croise les exports d'alarmes opérationnelles avec quatre fichiers de référence locaux afin d'enrichir automatiquement chaque notification d'escalade.
+            </p>
+
+            <div class="pipelines-grid">
+                <div class="pipeline-box">
+                    <h3><i class="fas fa-filter"></i> 1. Extraction & Nettoyage des Alarmes</h3>
+                    <ol>
+                        <li><strong>Lecture Excel (<code>.xlsx</code>) :</strong> Chargement via <code>Pandas</code> et <code>OpenPyXL</code> en ignorant les 5 premières lignes d'en-tête technique.</li>
+                        <li><strong>Parsing Regex (<code>re</code>) :</strong> Nettoyage et extraction des identifiants/noms de sites depuis la colonne <code>MO Name</code>.</li>
+                        <li><strong>Horodatage d'incident :</strong> Analyse de la colonne <code>Last Occurred (NT)</code> pour isoler le début réel de l'incident.</li>
+                        <li><strong>Calcul de criticité :</strong> Classification automatique en <strong>P1</strong> (&ge; 5 sites) ou <strong>P2</strong> (&lt; 5 sites).</li>
+                    </ol>
+                </div>
+
+                <div class="pipeline-box">
+                    <h3><i class="fas fa-database"></i> 2. Enrichissement & Persistance</h3>
+                    <ol>
+                        <li><strong>Croisement multi-fichiers :</strong> Association automatique de la région, du statut de validation, du partenaire de partage et du technicien FME.</li>
+                        <li><strong>Détection des sites inconnus :</strong> Saisie interactive guidée si un site est absent des référentiels.</li>
+                        <li><strong>Sauvegarde automatique :</strong> Écriture immédiate dans <code>SiteRegions.csv</code> et <code>Shared sites.xlsx</code>.</li>
+                        <li><strong>Édition à chaud :</strong> Mise à jour des caractéristiques d'un site existant via le module <code>Modify</code>.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Tableau des 4 fichiers de référence -->
+            <div class="api-table-wrapper">
+                <h3>Architecture des fichiers de référence</h3>
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>Fichier</th>
+                            <th>Colonnes requises</th>
+                            <th>Rôle dans le pipeline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>SiteRegions.csv</code></td>
+                            <td><code>Site_Name</code>, <code>REGION</code>, <code>Site_id</code> (séparateur <code>\t</code>)</td>
+                            <td>Associe chaque site à sa région géographique et enregistre les nouveaux sites découverts.</td>
+                        </tr>
+                        <tr>
+                            <td><code>listofwrongsite2.xlsx</code></td>
+                            <td><code>SL ID</code></td>
+                            <td>Détermine automatiquement le statut opérationnel du site (<code>ACCEPTED</code> ou <code>FAILED</code>).</td>
+                        </tr>
+                        <tr>
+                            <td><code>Shared sites.xlsx</code></td>
+                            <td><code>SITE NAME</code>, <code>SITE ID</code>, <code>SHARE SITE</code></td>
+                            <td>Identifie les infrastructures partagées et le fournisseur tiers à mentionner dans l'escalade.</td>
+                        </tr>
+                        <tr>
+                            <td><code>FME.xlsx</code></td>
+                            <td><code>Name_Site</code>, <code>Site</code>, <code>FME</code></td>
+                            <td>Fournit les informations d'équipe terrain (<em>Field Maintenance Engineer</em>) associées au site.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bottom-nav">
+                <a href="../index.html#projects" class="btn-primary"><i class="fas fa-arrow-left"></i> Toutes les réalisations</a>
+                <a href="../index.html#contact" class="btn-outline-dark">Discuter de ce projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modale d'agrandissement de la capture -->
+    <div id="img-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Aperçu agrandi">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <span>Créé par <a href="../index.html#home">Djibo Hamidou</a> | <span class="far fa-copyright"></span> 2026 Tous droits réservés.</span>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Zoom sur la capture d'écran
+        $(document).ready(function(){
+            $('.screenshot-frame').click(function(){
+                const img = $(this).find('img');
+                $('#lightbox-img').attr('src', img.attr('src'));
+                $('#lightbox-caption').text(img.attr('alt'));
+                $('#img-lightbox').fadeIn(200).css('display', 'flex');
+            });
+
+            $('.lightbox-close, #img-lightbox').click(function(e){
+                if(e.target !== $('#lightbox-img')[0]){
+                    $('#img-lightbox').fadeOut(200);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
