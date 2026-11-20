@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes RAG Studio | Djibo Hamidou</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/5be5f8dfbc.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Bouton retour en haut -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar sticky">
+        <div class="max-width">
+            <div class="logo"><a href="../index.html#home">Portfo<span>lio.</span></a></div>
+            <ul class="menu">
+                <li><a href="../index.html#home">Accueil</a></li>
+                <li><a href="../index.html#projects">Réalisations</a></li>
+                <li><a href="../index.html#about">À propos</a></li>
+                <li><a href="../index.html#services">Expertises</a></li>
+                <li><a href="../index.html#skills">Compétences</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../DjiboHamidouCV.pdf" download="CV_Djibo_Hamidou.pdf" class="nav-cv-btn"><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête du projet -->
+    <header class="project-hero">
+        <div class="max-width">
+            <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux réalisations</a>
+            <div class="project-badge">Intelligence Artificielle • Architecture RAG • 100 % Local-First</div>
+            <h1>Hermes RAG Studio</h1>
+            <p class="project-lead">
+                Application web full-stack d'assistant conversationnel et documentaire exécutée intégralement en local. Elle permet d'interagir avec un grand modèle de langage (LLM) ou d'interroger le contenu de documents PDF via une architecture <strong>Retrieval-Augmented Generation (RAG)</strong>, sans qu'aucune donnée ne quitte la machine.
+            </p>
+            <div class="project-meta">
+                <span><i class="fab fa-node-js"></i> Node.js 24.x & Express 4.21</span>
+                <span><i class="fas fa-link"></i> LangChain JS 0.3.x</span>
+                <span><i class="fas fa-microchip"></i> LM Studio (Hermes-3-Llama-3.2-3B)</span>
+                <span><i class="fas fa-database"></i> Ollama (nomic-embed-text • 768d)</span>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/HamidouDjibo/langchain_js_app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="fab fa-github"></i> Voir le code sur GitHub
+                </a>
+                <a href="#architecture" class="btn-secondary">
+                    <i class="fas fa-sitemap"></i> Explorer l'architecture
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Captures d'écran -->
+    <section class="project-screenshots">
+        <div class="max-width">
+            <h2 class="title">Aperçu de l'interface</h2>
+            <p class="section-intro">
+                Cliquez sur une capture pour l'agrandir. L'interface bascule automatiquement entre conversation libre et interrogation documentaire dès qu'un fichier PDF est importé.
+            </p>
+            <div class="screenshots-grid">
+                <figure class="screenshot-card">
+                    <div class="screenshot-frame">
+                        <img src="../portfolio-images/images/projets/mode-general.png" alt="Interface Hermes RAG Studio - Mode Général" class="zoomable-img">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Agrandir</span>
+                    </div>
+                    <figcaption>
+                        <h3>Mode Général — Conversation libre</h3>
+                        <p>Interaction directe avec le modèle <strong>Hermes-3-Llama-3.2-3B</strong> via LM Studio lorsqu'aucun document n'est chargé, avec suivi de l'état des moteurs locaux dans la barre latérale.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="screenshot-card">
+                    <div class="screenshot-frame">
+                        <img src="../portfolio-images/images/projets/mode-rag.png" alt="Interface Hermes RAG Studio - Mode RAG Actif" class="zoomable-img">
+                        <span class="zoom-badge"><i class="fas fa-search-plus"></i> Agrandir</span>
+                    </div>
+                    <figcaption>
+                        <h3>Mode RAG Actif — Interrogation de PDF</h3>
+                        <p>Indexation vectorielle automatique à l'import d'un PDF, génération de réponses ancrées dans les passages pertinents et affichage des <strong>sources citées</strong> sous chaque réponse.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section class="project-features">
+        <div class="max-width">
+            <h2 class="title">Fonctionnalités clés</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Confidentialité totale (Zero-Cloud)</h3>
+                    <p>Exécution intégrale de l'inférence LLM et du calcul d'embeddings en local via LM Studio et Ollama. Idéal pour l'analyse de documents sensibles.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-random"></i></div>
+                    <h3>Bascule dynamique de pipeline</h3>
+                    <p>Passage transparent entre le <strong>Mode Général</strong> (dialogue libre) et le <strong>Mode RAG Actif</strong> dès l'importation d'un document PDF.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3>Ingestion PDF par glisser-déposer</h3>
+                    <p>Extraction du texte brut, découpage intelligent en segments avec chevauchement (512 / 128 caractères), vectorisation 768d et indexation en mémoire vive.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Interface Dark Workspace</h3>
+                    <p>Tableau de bord réactif affichant l'état du pipeline en temps réel, la stack active, les extraits sources cités et des suggestions de requêtes rapides.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Architecture & Stack -->
+    <section class="project-arch" id="architecture">
+        <div class="max-width">
+            <h2 class="title">Architecture technique</h2>
+            <p class="section-intro">
+                Le système repose sur une séparation nette entre le client web (HTML5 / CSS3 / JS Vanilla), le serveur d'orchestration <strong>Express + LangChain JS</strong> (port 3000) et les deux moteurs d'IA locaux.
+            </p>
+
+            <div class="pipelines-grid">
+                <div class="pipeline-box">
+                    <h3><i class="fas fa-file-import"></i> 1. Pipeline d'Ingestion (RAG)</h3>
+                    <ol>
+                        <li><strong>PDFLoader :</strong> Extraction du texte brut depuis le fichier PDF importé (jusqu'à 50 Mo).</li>
+                        <li><strong>RecursiveCharacterTextSplitter :</strong> Découpage en segments de 512 caractères avec chevauchement de 128 caractères.</li>
+                        <li><strong>Ollama Embeddings :</strong> Vectorisation en 768 dimensions via <code>nomic-embed-text</code> (port <code>11434</code>).</li>
+                        <li><strong>MemoryVectorStore :</strong> Stockage et indexation vectorielle rapide en mémoire vive.</li>
+                    </ol>
+                </div>
+
+                <div class="pipeline-box">
+                    <h3><i class="fas fa-comments"></i> 2. Pipeline de Génération</h3>
+                    <ol>
+                        <li><strong>Similarity Search :</strong> Recherche sémantique des 3 passages (<em>Top-3 chunks</em>) les plus proches de la question.</li>
+                        <li><strong>Prompt Augmentation :</strong> Injection contrôlée du contexte documentaire dans le prompt système.</li>
+                        <li><strong>LM Studio API :</strong> Inférence locale via <code>hermes-3-llama-3.2-3b</code> (<code>Q4_K_M</code>) sur <code>localhost:1234/v1</code>.</li>
+                        <li><strong>Traçabilité :</strong> Restitution de la réponse accompagnée des extraits sources utilisés.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Tableau des Endpoints API -->
+            <div class="api-table-wrapper">
+                <h3>Endpoints de l'API REST</h3>
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>Méthode</th>
+                            <th>Endpoint</th>
+                            <th>Payload</th>
+                            <th>Rôle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="http-badge">POST</span></td>
+                            <td><code>/upload</code></td>
+                            <td><code>multipart/form-data</code> (<code>pdf</code>, max. 50 Mo)</td>
+                            <td>Extrait le texte du PDF, génère les vecteurs via Ollama et active le mode RAG.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="http-badge">POST</span></td>
+                            <td><code>/chat</code></td>
+                            <td><code>JSON</code> <code>{ "question": "..." }</code></td>
+                            <td>Interroge le <code>MemoryVectorStore</code> (top-3) si un document est actif, sinon répond en mode Général.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="http-badge">POST</span></td>
+                            <td><code>/reset</code></td>
+                            <td><code>JSON</code> <code>{ "deleteFiles": true }</code></td>
+                            <td>Réinitialise l'index vectoriel, supprime les PDF temporaires et revient au mode Général.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pistes d'amélioration -->
+            <div class="roadmap-box">
+                <h3><i class="fas fa-road"></i> Perspectives d'évolution</h3>
+                <ul>
+                    <li>Migration vers les chaînes composables <strong>LCEL</strong> (<code>createStuffDocumentsChain</code>).</li>
+                    <li>Persistance des index vectoriels sur disque et interrogation multi-documents simultanée.</li>
+                    <li>Ajout d'une mémoire conversationnelle glissante pour conserver le contexte sur plusieurs échanges.</li>
+                </ul>
+            </div>
+
+            <div class="bottom-nav">
+                <a href="../index.html#projects" class="btn-primary"><i class="fas fa-arrow-left"></i> Toutes les réalisations</a>
+                <a href="../index.html#contact" class="btn-outline-dark">Discuter de ce projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modale d'agrandissement des captures -->
+    <div id="img-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Aperçu agrandi">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <span>Créé par <a href="../index.html#home">Djibo Hamidou</a> | <span class="far fa-copyright"></span> 2026 Tous droits réservés.</span>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Zoom sur les captures d'écran
+        $(document).ready(function(){
+            $('.screenshot-frame').click(function(){
+                const img = $(this).find('img');
+                $('#lightbox-img').attr('src', img.attr('src'));
+                $('#lightbox-caption').text(img.attr('alt'));
+                $('#img-lightbox').fadeIn(200).css('display', 'flex');
+            });
+
+            $('.lightbox-close, #img-lightbox').click(function(e){
+                if(e.target !== $('#lightbox-img')[0]){
+                    $('#img-lightbox').fadeOut(200);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
